@@ -31,7 +31,7 @@ export default {
     language: 'en',
     missing: 'No English Pokédex entry for this Pokémon.',
     version: 'Version:',
-    next: 'Show another entry',
+    next: 'Another entry',
   },
   cry: {
     play: 'Play cry',
