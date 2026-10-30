@@ -1,0 +1,36 @@
+{
+  "name": "pokedex-lite",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A lightweight Pokédex: search, random pick and a Pokémon card with evolutions. React + Vite + Tailwind, data from PokeAPI.",
+  "type": "module",
+  "keywords": [
+    "pokemon",
+    "pokedex",
+    "pokeapi",
+    "react",
+    "vite",
+    "tailwindcss"
+  ],
+  "engines": {
+    "node": ">=20.19"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.3",
+    "@vitejs/plugin-react": "^6.1.2",
+    "tailwindcss": "^4.3.3",
+    "vite": "^8.3.5",
+    "vitest": "^5.0.5"
+  }
+}

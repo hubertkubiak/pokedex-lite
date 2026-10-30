@@ -1,0 +1,69 @@
+@import 'tailwindcss';
+
+@theme {
+  --animate-card-in: card-in 350ms ease-out both;
+  --animate-pop-in: pop-in 300ms ease-out both;
+  --animate-hop: hop 800ms ease-out 1;
+
+  @keyframes card-in {
+    0% {
+      opacity: 0;
+      transform: translateY(16px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes pop-in {
+    0% {
+      opacity: 0;
+      transform: scale(0.85);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes hop {
+    0%,
+    100% {
+      transform: translateY(0) scale(1);
+    }
+    20% {
+      transform: translateY(-18px) scale(1.04);
+    }
+    40% {
+      transform: translateY(0) scale(0.98);
+    }
+    60% {
+      transform: translateY(-8px) scale(1.02);
+    }
+    80% {
+      transform: translateY(0) scale(1);
+    }
+  }
+}
+
+@layer base {
+  body {
+    @apply min-h-screen bg-slate-950 text-slate-100 antialiased;
+  }
+
+  /* Tailwind v4 no longer sets a pointer cursor on buttons */
+  button:not(:disabled) {
+    cursor: pointer;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
