@@ -55,7 +55,16 @@ The app runs at <http://localhost:5173>. No API keys, no backend.
 | `npm test` | Unit tests (Vitest) |
 | `npm run test:watch` | Tests in watch mode |
 
-The build uses relative paths, so `dist/` can be dropped onto any static host, including a subdirectory (e.g. GitHub Pages).
+The build uses relative paths, so `dist/` can be dropped onto any static host, including a subdirectory.
+
+### Deploying to GitHub Pages
+
+The repo ships with two workflows in `.github/workflows/`:
+
+- **`ci.yml`** – runs tests and the build on every push to `main` and on pull requests.
+- **`deploy.yml`** – tests, builds and publishes the app to GitHub Pages on every push to `main` (or manually from the *Actions* tab).
+
+One-time setup: in the repository go to **Settings → Pages → Build and deployment → Source** and choose **GitHub Actions**. After the next push the app is live at `https://<username>.github.io/<repo>/`.
 
 ## 🗂️ Project structure
 
