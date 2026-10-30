@@ -48,14 +48,11 @@ export default function PokemonCard({ id, celebrate, onSelect }) {
           </header>
           <div
             key={hop ? `hop-${celebrate.n}` : 'static'}
-            className={`mx-auto my-1 h-36 w-36 ${hop ? 'motion-safe:animate-hop' : ''}`}
+            className={`mx-auto my-1 h-32 w-32 ${hop ? 'motion-safe:animate-hop' : ''}`}
           >
             <FadeImage src={pokemonImage(pokemon)} alt={t.card.artworkAlt(name)} className="h-full w-full" />
           </div>
-          <section aria-label={t.card.flavorTitle} className="rounded-xl bg-slate-800 p-3">
-            <h3 className="mb-1 font-semibold">{t.card.flavorTitle}</h3>
-            <FlavorText key={species.id} species={species} />
-          </section>
+          <FlavorText key={species.id} species={species} />
         </div>
 
         {/* Column 2: stats */}
